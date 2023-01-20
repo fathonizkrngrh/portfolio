@@ -2,11 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-.home {
-  background: rgb(28, 130, 173);
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-fixed {
+  @apply fixed z-[999] bg-dark bg-opacity-10;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.bloop {
+  background: rgb(91, 192, 248);
   background: linear-gradient(
-    39deg,
-    rgba(28, 130, 173, 1) 27%,
-    rgba(19, 0, 90, 1) 100%
+    90deg,
+    rgba(91, 192, 248, 1) 22%,
+    rgba(19, 99, 223, 1) 80%
   );
+}
+
+.btn {
+  background: rgb(14 165 233);
+  /* background: linear-gradient(
+    90deg,
+    rgba(91, 192, 248, 1) 22%,
+    rgba(19, 99, 223, 1) 80%
+  ); */
+  box-shadow: 4.5px 4.5px 3.6px rgba(0, 0, 0, 0.022),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.033),
+    30.1px 30.1px 24.1px rgba(0, 0, 0, 0.045),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.icon {
+  @apply color-secondary;
+}
+
+#lll {
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#skills {
+  background: "#064663";
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-slate-500;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45 origin-bottom-left;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
 }
